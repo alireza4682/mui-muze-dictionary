@@ -22,6 +22,8 @@ const OneCard = (card: oneCardType) => {
   const { headWord, mode } = card;
   const dispatch = useAppDispatch();
 
+  //this is not right useQueryWord should be called in store
+
   const { status, data } = useQueryWord(mode, headWord);
 
   const makeNewCard = (newWord: string, mode: TendPoint) => {

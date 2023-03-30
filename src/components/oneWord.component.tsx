@@ -1,6 +1,7 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
+import IconButton from "@mui/material/IconButton";
 
 const OneWord = (word: any) => {
   return (
@@ -14,7 +15,9 @@ const OneWord = (word: any) => {
       }}
     >
       <Typography>{`${word.word}`}</Typography>
-      <ArrowRightIcon sx={{ color: "greenyellow" }} />
+      <IconButton>
+        <ArrowRightIcon sx={{ color: "blue" }} />
+      </IconButton>
     </Box>
   );
 };
