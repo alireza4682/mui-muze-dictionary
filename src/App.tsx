@@ -1,10 +1,11 @@
 import Form from "./components/form.component";
-import OneWord from "./components/oneWord.component";
+import CardContainer from "./components/cardContainer.component";
 
 function App() {
   return (
-    <div>
+    <div style={{ display: "flex", flexDirection: "column" }}>
       <Form />
+      <CardContainer />
     </div>
   );
 }

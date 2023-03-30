@@ -16,6 +16,7 @@ import CardAction from "@mui/material/CardActions";
 import CloseIcon from "@mui/icons-material/Close";
 import CardHeader from "@mui/material/CardHeader";
 import IconButton from "@mui/material/IconButton";
+import ModeIcon from "../hooks/modeIconchooser";
 
 const OneCard = (card: oneCardType) => {
   const { headWord, mode } = card;
@@ -37,7 +38,7 @@ const OneCard = (card: oneCardType) => {
   return (
     <Card sx={{ minWidth: "325" }}>
       <CardHeader
-        avatar={}
+        avatar={ModeIcon(mode)}
         action={
           <IconButton>
             <CloseIcon onClick={() => closeCard(card)} />
@@ -46,7 +47,15 @@ const OneCard = (card: oneCardType) => {
         title={headWord}
       />
 
-      <CardContent></CardContent>
+      <CardContent
+        sx={{ display: "flex", alignItems: "center", flexDirection: "column" }}
+      >
+        {Array.isArray(data)
+          ? data
+              .filter((_, idx) => idx < 5)
+              .map((s) => <OneWord word={s.word} />)
+          : null}
+      </CardContent>
     </Card>
   );
 };
