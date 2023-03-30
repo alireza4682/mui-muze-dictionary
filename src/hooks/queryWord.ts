@@ -1,5 +1,4 @@
 import { useQuery } from "@tanstack/react-query";
-
 import { TendPoint } from "../store/slices/word.slice";
 
 const fetchWord = async (endpoint: TendPoint, newWord: string) => {
