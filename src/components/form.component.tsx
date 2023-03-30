@@ -69,6 +69,7 @@ function Form() {
         variant="contained"
         sx={{ backgroundColor: "gray" }}
         startIcon={<SearchIcon />}
+        onClick={searchWord}
       >
         Search
       </Button>

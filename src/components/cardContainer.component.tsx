@@ -12,6 +12,7 @@ import Close from "@mui/icons-material/Close";
 const CardContainer = () => {
   const cards = useSelector((store: RootState) => store.word.cards);
   const dispatch = useAppDispatch();
+
   const onCloseAllCards = () => {
     dispatch(removeAllCards());
   };
@@ -25,7 +26,7 @@ const CardContainer = () => {
     [cards]
   );
 
-  const onListMemo = useMemo(() => onListChange(cards), [cards]);
+  const onListMemo = useMemo(() => onListChange(cards), [cards.length]);
 
   return (
     <Box>
