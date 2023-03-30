@@ -1,13 +1,21 @@
-import Paper from "@mui/material/Paper";
+import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 
 const OneWord = (word: any) => {
   return (
-    <Paper sx={{ display: "flex", alignItems: "center", width: "300" }}>
-      <Typography variant="h4">{word}</Typography>
+    <Box
+      component="div"
+      sx={{
+        display: "flex",
+        justifyContent: "space-between",
+        width: "200px",
+        margin: "6px",
+      }}
+    >
+      <Typography>{`${word.word}`}</Typography>
       <ArrowRightIcon sx={{ color: "greenyellow" }} />
-    </Paper>
+    </Box>
   );
 };
 export default OneWord;

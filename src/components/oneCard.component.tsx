@@ -40,8 +40,8 @@ const OneCard = (card: oneCardType) => {
       <CardHeader
         avatar={ModeIcon(mode)}
         action={
-          <IconButton>
-            <CloseIcon onClick={() => closeCard(card)} />
+          <IconButton onClick={() => closeCard(card)}>
+            <CloseIcon />
           </IconButton>
         }
         title={headWord}
@@ -53,7 +53,7 @@ const OneCard = (card: oneCardType) => {
         {Array.isArray(data)
           ? data
               .filter((_, idx) => idx < 5)
-              .map((s) => <OneWord word={s.word} />)
+              .map((s) => <OneWord word={s.word} key={s.word} />)
           : null}
       </CardContent>
     </Card>
