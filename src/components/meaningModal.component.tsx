@@ -1,5 +1,6 @@
-import { useState } from "react";
+import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
+import { useState } from "react";
 
 const style = {
   position: "absolute" as "absolute",
@@ -13,13 +14,17 @@ const style = {
   p: 4,
 };
 
-const MeaningModal = () => {
-  const [open, setOpen] = useState(false);
-  const handleOpen = () => setOpen(true);
+const MeaningModal = (
+  open: boolean,
+  setOpen: React.Dispatch<React.SetStateAction<boolean>>
+) => {
   const handleClose = () => setOpen(false);
 
-    return (
-        
-    )
-
+  return (
+    <Modal open={open} onClose={handleClose} aria-labelledby="meaning">
+      <Box sx={style}>jsdsjmskfmodiff</Box>
+    </Modal>
+  );
 };
+
+export default MeaningModal;

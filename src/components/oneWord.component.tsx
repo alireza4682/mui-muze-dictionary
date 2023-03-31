@@ -10,10 +10,14 @@ import {
 import useQueryWord from "../hooks/queryWord";
 import { useAppDispatch } from "../store/store";
 import Divider from "@mui/material/Divider";
+import { useState } from "react";
+import MeaningModal from "./meaningModal.component";
+import Button from "@mui/material/Button";
 
 const OneWord = (word: any, mode: TendPoint) => {
   const dispatch = useAppDispatch();
   const { status, data } = useQueryWord(mode, word);
+  const [open, setOpen] = useState(false);
 
   const makeNewCard = (newWord: string, mode: TendPoint) => {
     dispatch(setHeadWord(newWord));
@@ -30,16 +34,19 @@ const OneWord = (word: any, mode: TendPoint) => {
           display: "flex",
           justifyContent: "space-between",
           width: "200px",
-          margin: "6px",
+          margin: "0px",
           alignItems: "center",
         }}
       >
-        <Typography sx={{ ml: "20px" }}>{`${word.word}`}</Typography>
+        <Button onClick={() => setOpen(true)} color="success">
+          <Typography>{`${word.word}`}</Typography>
+        </Button>
         <IconButton onClick={() => makeNewCard(word.word, mode)}>
           <ArrowRightIcon sx={{ color: "blue" }} />
         </IconButton>
       </Box>
       <Divider variant="middle" />
+      {open ? <MeaningModal open={open} setOpen={setOpen} /> : null}
     </Box>
   );
 };
