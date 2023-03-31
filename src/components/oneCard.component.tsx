@@ -1,13 +1,6 @@
 import useQueryWord from "../hooks/queryWord";
-import {
-  oneCardType,
-  onFetchSuccess,
-  removeCard,
-  setHeadWord,
-  TendPoint,
-} from "../store/slices/word.slice";
+import { oneCardType, removeCard } from "../store/slices/word.slice";
 import { useAppDispatch } from "../store/store";
-import { useState } from "react";
 import OneWord from "./oneWord.component";
 import Card from "@mui/material/Card";
 import Typography from "@mui/material/Typography";
@@ -17,21 +10,13 @@ import CloseIcon from "@mui/icons-material/Close";
 import CardHeader from "@mui/material/CardHeader";
 import IconButton from "@mui/material/IconButton";
 import ModeIcon from "../hooks/modeIconchooser";
+import CardSkeleton from "./cardSkeleton.component";
 
 const OneCard = (card: oneCardType) => {
   const { headWord, mode } = card;
   const dispatch = useAppDispatch();
 
-  //this is not right useQueryWord should be called in store
-
   const { status, data } = useQueryWord(mode, headWord);
-
-  const makeNewCard = (newWord: string, mode: TendPoint) => {
-    dispatch(setHeadWord(newWord));
-    if (status === "success") {
-      dispatch(onFetchSuccess(data));
-    }
-  };
 
   const closeCard = (card: oneCardType) => {
     dispatch(removeCard(card));
@@ -52,11 +37,13 @@ const OneCard = (card: oneCardType) => {
       <CardContent
         sx={{ display: "flex", alignItems: "center", flexDirection: "column" }}
       >
-        {Array.isArray(data)
-          ? data
-              .filter((_, idx) => idx < 5)
-              .map((s) => <OneWord word={s.word} key={s.word} />)
-          : null}
+        {Array.isArray(data) ? (
+          data
+            .filter((_, idx) => idx < 5)
+            .map((s) => <OneWord word={s.word} key={s.word} mode={mode} />)
+        ) : (
+          <CardSkeleton />
+        )}
       </CardContent>
     </Card>
   );
