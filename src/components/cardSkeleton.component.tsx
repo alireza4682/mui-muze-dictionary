@@ -17,6 +17,7 @@ const CardSkeleton = () => {
           variant="rounded"
           width={130}
           height={20}
+          animation="wave"
         />
         <Skeleton variant="circular" width={30} height={30} />
       </Box>
@@ -33,6 +34,7 @@ const CardSkeleton = () => {
           variant="rounded"
           width={130}
           height={20}
+          animation="wave"
         />
         <Skeleton variant="circular" width={30} height={30} />
       </Box>{" "}
@@ -49,6 +51,7 @@ const CardSkeleton = () => {
           variant="rounded"
           width={130}
           height={20}
+          animation="wave"
         />
         <Skeleton variant="circular" width={30} height={30} />
       </Box>{" "}
@@ -65,6 +68,7 @@ const CardSkeleton = () => {
           variant="rounded"
           width={130}
           height={20}
+          animation="wave"
         />
         <Skeleton variant="circular" width={30} height={30} />
       </Box>{" "}
@@ -81,6 +85,7 @@ const CardSkeleton = () => {
           variant="rounded"
           width={130}
           height={20}
+          animation="wave"
         />
         <Skeleton variant="circular" width={30} height={30} />
       </Box>

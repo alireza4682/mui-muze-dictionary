@@ -23,7 +23,15 @@ const OneCard = (card: oneCardType) => {
   };
 
   return (
-    <Card sx={{ minWidth: "325" }}>
+    <Card
+      sx={{
+        width: "250px",
+        borderRadius: "15px",
+        backgroundColor: "pink",
+        margin: "15px",
+      }}
+      variant="elevation"
+    >
       <CardHeader
         avatar={ModeIcon(mode)}
         action={

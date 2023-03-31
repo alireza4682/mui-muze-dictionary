@@ -4,7 +4,7 @@ import OneCard from "./oneCard.component";
 import { RootState, useAppDispatch } from "../store/store";
 import { oneCardType } from "../store/slices/word.slice";
 import { removeAllCards } from "../store/slices/word.slice";
-import Grid from "@mui/material/Grid";
+import Grid from "@mui/material/Unstable_Grid2";
 import { Box } from "@mui/system";
 import SpeedDial from "@mui/material/SpeedDial";
 import Close from "@mui/icons-material/Close";
@@ -20,7 +20,11 @@ const CardContainer = () => {
   const onListChange = useCallback(
     (cards: oneCardType[]) => {
       return cards.map((card, idx) => {
-        return <OneCard {...card} key={idx} />;
+        return (
+          <Grid xs={2} sm={2} md={2} key={idx}>
+            <OneCard {...card} />
+          </Grid>
+        );
       });
     },
     [cards]
