@@ -1,6 +1,7 @@
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import { useState } from "react";
+import { TProps } from "./oneWord.component";
 
 const style = {
   position: "absolute" as "absolute",
@@ -9,15 +10,13 @@ const style = {
   transform: "translate(-50%, -50%)",
   width: 400,
   bgcolor: "background.paper",
-  border: "2px solid #000",
   boxShadow: 24,
+  borderRadius: 2,
   p: 4,
 };
 
-const MeaningModal = (
-  open: boolean,
-  setOpen: React.Dispatch<React.SetStateAction<boolean>>
-) => {
+const MeaningModal = (props: TProps) => {
+  const { open, setOpen } = props;
   const handleClose = () => setOpen(false);
 
   return (

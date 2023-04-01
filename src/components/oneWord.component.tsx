@@ -14,6 +14,11 @@ import { useState } from "react";
 import MeaningModal from "./meaningModal.component";
 import Button from "@mui/material/Button";
 
+export type TProps = {
+  open: boolean;
+  setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
 const OneWord = (word: any, mode: TendPoint) => {
   const dispatch = useAppDispatch();
   const { status, data } = useQueryWord(mode, word);
@@ -25,6 +30,8 @@ const OneWord = (word: any, mode: TendPoint) => {
       dispatch(onFetchSuccess(data));
     }
   };
+
+  const props = { open, setOpen };
 
   return (
     <Box component="div">
@@ -46,7 +53,7 @@ const OneWord = (word: any, mode: TendPoint) => {
         </IconButton>
       </Box>
       <Divider variant="middle" />
-      {open ? <MeaningModal open={open} setOpen={setOpen} /> : null}
+      {open ? <MeaningModal {...props} /> : null}
     </Box>
   );
 };
