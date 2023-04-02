@@ -17,6 +17,7 @@ import Button from "@mui/material/Button";
 export type TProps = {
   open: boolean;
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  defs: string[];
 };
 
 const OneWord = (word: any, mode: TendPoint) => {
@@ -31,7 +32,9 @@ const OneWord = (word: any, mode: TendPoint) => {
     }
   };
 
-  const props = { open, setOpen };
+  const defs = word.defs;
+
+  const props = { open, setOpen, defs };
 
   return (
     <Box component="div">
