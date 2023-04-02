@@ -8,7 +8,7 @@ import TextField from "@mui/material/TextField";
 import { Button } from "@mui/material";
 import styled from "@emotion/styled";
 import SearchIcon from "@mui/icons-material/Search";
-import InputAdornment from "@mui/material/InputAdornment";
+import ModeIcon from "../hooks/modeIconchooser";
 
 const CssTextField = styled(TextField)({
   "& label.Mui-focused": {
@@ -59,12 +59,16 @@ function Form() {
       }}
       onSubmit={searchWord}
     >
-      <CssTextField
-        id="outlined-basic"
-        label="search a word"
-        onChange={onChangeBox}
-        margin="normal"
-      />
+      <Box sx={{ display: "flex", alignItems: "center", gap: "10px" }}>
+        <CssTextField
+          id="outlined-basic"
+          label="search a word"
+          onChange={onChangeBox}
+          margin="normal"
+        />
+
+        {ModeIcon(mode)}
+      </Box>
       <Button
         variant="contained"
         sx={{ backgroundColor: "gray" }}
