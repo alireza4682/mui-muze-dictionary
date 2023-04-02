@@ -1,6 +1,7 @@
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import { TProps } from "./oneWord.component";
+import Typography from "@mui/material/Typography";
 
 const style = {
   position: "absolute" as "absolute",
@@ -9,17 +10,20 @@ const style = {
   transform: "translate(-50%, -50%)",
   width: 400,
   bgcolor: "background.paper",
-  border: "2px solid #000",
+  borderRadius: "5px",
   boxShadow: 24,
   p: 4,
 };
 
 const MeaningModal = ({ open, setOpen, defs }: TProps) => {
   const handleClose = () => setOpen(false);
-
   return (
     <Modal open={open} onClose={handleClose} aria-labelledby="meaning">
-      <Box sx={style}>{defs}</Box>
+      <Box sx={style}>
+        {Array.isArray(defs)
+          ? defs.map((d, idx) => <Typography key={idx}>{d}</Typography>)
+          : null}
+      </Box>
     </Modal>
   );
 };

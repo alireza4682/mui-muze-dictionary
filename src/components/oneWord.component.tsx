@@ -7,6 +7,7 @@ import Divider from "@mui/material/Divider";
 import { useState } from "react";
 import MeaningModal from "./meaningModal.component";
 import Button from "@mui/material/Button";
+import { TData } from "../hooks/queryWord";
 
 export type TProps = {
   open: boolean;
@@ -14,14 +15,15 @@ export type TProps = {
   defs: string[];
 };
 
-const OneWord = (
-  word: any,
-  mode: TendPoint,
-  callBack: (newWord: string, mode: TendPoint) => void
-) => {
-  const [open, setOpen] = useState(false);
+type TOneWordProps = {
+  wordToShow: TData;
+  mode: TendPoint;
+  callBack: (newWord: string, mode: TendPoint) => void;
+};
 
-  const defs = word.defs;
+const OneWord = ({ wordToShow, mode, callBack }: TOneWordProps) => {
+  const [open, setOpen] = useState(false);
+  const defs = wordToShow.defs;
   const props = { open, setOpen, defs };
 
   return (
@@ -37,9 +39,9 @@ const OneWord = (
         }}
       >
         <Button onClick={() => setOpen(true)} color="success">
-          <Typography>{`${word}`}</Typography>
+          <Typography>{wordToShow.word}</Typography>
         </Button>
-        <IconButton onClick={() => callBack(word.word, mode)}>
+        <IconButton onClick={() => callBack(wordToShow.word, mode)}>
           <ArrowRightIcon sx={{ color: "blue" }} />
         </IconButton>
       </Box>

@@ -33,7 +33,7 @@ const CardContainer = () => {
   const onListMemo = useMemo(() => onListChange(cards), [cards.length]);
 
   return (
-    <Box>
+    <Box sx={{ position: "relative" }}>
       <SpeedDial
         ariaLabel="close all cards"
         sx={{ position: "absolute", top: 16, right: 16 }}

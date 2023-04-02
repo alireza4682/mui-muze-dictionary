@@ -64,7 +64,7 @@ const OneCard = (card: oneCardType) => {
             .filter((_, idx) => idx < 5)
             .map((s) => (
               <OneWord
-                word={s}
+                wordToShow={s}
                 key={s.word}
                 mode={mode}
                 callBack={makeNewCard}
