@@ -15,7 +15,7 @@ const ModeIcon = (mode: TendPoint) => {
     case "rel_trg":
       return <LightbulbCircleIcon sx={{ color: "greenyellow" }} />;
     default:
-      return null;
+      return <div />;
   }
 };
 export default ModeIcon;
