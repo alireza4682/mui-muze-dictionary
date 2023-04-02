@@ -268,6 +268,11 @@
   resolved "https://registry.yarnpkg.com/@esbuild/win32-x64/-/win32-x64-0.16.17.tgz#c5a1a4bfe1b57f0c3e61b29883525c6da3e5c091"
   integrity sha512-y+EHuSchhL7FjHgvQL/0fnnFmO4T1bhvWANX6gcnqTjtnKWbTvUMCpGnv2+t+31d7RzyEAYAd4u2fnIhHL6N/Q==
 
+"@fontsource/charmonman@^4.5.10":
+  version "4.5.10"
+  resolved "https://registry.yarnpkg.com/@fontsource/charmonman/-/charmonman-4.5.10.tgz#5105ff547708a68b63a680e38e7c017918059330"
+  integrity sha512-vcx7/SxVVkXLygvDLbHtiVY3efNOlWfb+gwv80UPw2BzW99ttiM3WuGIWngAiq+dysOrjx5TLJzqSlrnlt0MXg==
+
 "@mui/base@5.0.0-alpha.123":
   version "5.0.0-alpha.123"
   resolved "https://registry.yarnpkg.com/@mui/base/-/base-5.0.0-alpha.123.tgz#2319b3f025342ffc738f38b1070d2140421c216e"
