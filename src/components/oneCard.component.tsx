@@ -1,5 +1,11 @@
 import useQueryWord from "../hooks/queryWord";
-import { oneCardType, removeCard } from "../store/slices/word.slice";
+import {
+  oneCardType,
+  onFetchSuccess,
+  removeCard,
+  setHeadWord,
+  TendPoint,
+} from "../store/slices/word.slice";
 import { useAppDispatch } from "../store/store";
 import OneWord from "./oneWord.component";
 import Card from "@mui/material/Card";
@@ -17,6 +23,13 @@ const OneCard = (card: oneCardType) => {
   const dispatch = useAppDispatch();
 
   const { status, data } = useQueryWord(mode, headWord);
+
+  const makeNewCard = (newWord: string, mode: TendPoint) => {
+    dispatch(setHeadWord(newWord));
+    if (status === "success") {
+      dispatch(onFetchSuccess(data));
+    }
+  };
 
   const closeCard = (card: oneCardType) => {
     dispatch(removeCard(card));
@@ -49,7 +62,14 @@ const OneCard = (card: oneCardType) => {
         {Array.isArray(data) ? (
           data
             .filter((_, idx) => idx < 5)
-            .map((s) => <OneWord word={s.word} key={s.word} mode={mode} />)
+            .map((s) => (
+              <OneWord
+                word={s}
+                key={s.word}
+                mode={mode}
+                callBack={makeNewCard}
+              />
+            ))
         ) : (
           <CardSkeleton />
         )}
