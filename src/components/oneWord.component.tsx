@@ -4,10 +4,12 @@ import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 import IconButton from "@mui/material/IconButton";
 import { TendPoint } from "../store/slices/word.slice";
 import Divider from "@mui/material/Divider";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import MeaningModal from "./meaningModal.component";
 import Button from "@mui/material/Button";
 import { TData } from "../hooks/queryWord";
+import { useSelector } from "react-redux";
+import { RootState } from "../store/store";
 
 export type TProps = {
   open: boolean;
@@ -25,6 +27,8 @@ const OneWord = ({ wordToShow, mode, callBack }: TOneWordProps) => {
   const [open, setOpen] = useState(false);
   const defs = wordToShow.defs;
   const props = { open, setOpen, defs };
+  const cards = useSelector((store: RootState) => store.word.cards);
+  const seen = cards.find((card) => card.headWord === wordToShow.word);
 
   return (
     <Box component="div">
@@ -42,7 +46,7 @@ const OneWord = ({ wordToShow, mode, callBack }: TOneWordProps) => {
           <Typography>{wordToShow.word}</Typography>
         </Button>
         <IconButton onClick={() => callBack(wordToShow.word, mode)}>
-          <ArrowRightIcon sx={{ color: "blue" }} />
+          <ArrowRightIcon sx={{ color: !seen ? "blue" : "red" }} />
         </IconButton>
       </Box>
       <Divider variant="middle" />
