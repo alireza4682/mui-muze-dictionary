@@ -37,7 +37,7 @@ const OneWord = ({ wordToShow, mode, callBack }: TOneWordProps) => {
         sx={{
           display: "flex",
           justifyContent: "space-between",
-          width: "200px",
+          width: "220px",
           margin: "5px",
           alignItems: "center",
         }}

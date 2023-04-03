@@ -8,15 +8,14 @@ import {
 } from "../store/slices/word.slice";
 import { useAppDispatch } from "../store/store";
 import OneWord from "./oneWord.component";
-import Card from "@mui/material/Card";
 import Typography from "@mui/material/Typography";
-import CardContent from "@mui/material/CardContent";
 import CloseIcon from "@mui/icons-material/Close";
-import CardHeader from "@mui/material/CardHeader";
 import IconButton from "@mui/material/IconButton";
 import ModeIcon from "../hooks/modeIconchooser";
 import CardSkeleton from "./cardSkeleton.component";
 import Divider from "@mui/material/Divider";
+import Paper from "@mui/material/Paper";
+import { Box } from "@mui/material";
 
 const OneCard = (card: oneCardType) => {
   const { headWord, mode } = card;
@@ -36,28 +35,48 @@ const OneCard = (card: oneCardType) => {
   };
 
   return (
-    <Card
+    <Paper
+      elevation={20}
       sx={{
         width: "250px",
-        height: "370px",
+        height: "340px",
         borderRadius: "15px",
-        backgroundColor: "",
+        backgroundColor: "gray",
         margin: "15px",
       }}
-      variant="elevation"
     >
-      <CardHeader
-        avatar={ModeIcon(mode)}
-        action={
-          <IconButton onClick={() => closeCard(card)}>
-            <CloseIcon />
-          </IconButton>
-        }
-        title={headWord}
-      />
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "space-between",
+          pt: 1,
+          pl: 1,
+          alignItems: "center",
+          mb: 1,
+        }}
+      >
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "row",
+            justifyItems: "start",
+          }}
+        >
+          {ModeIcon(mode)}
+          <Typography sx={{ ml: 2 }}>{headWord}</Typography>
+        </Box>
+        <IconButton onClick={() => closeCard(card)} sx={{ mr: 1 }}>
+          <CloseIcon />
+        </IconButton>
+      </Box>
       <Divider variant="middle" />
-      <CardContent
-        sx={{ display: "flex", alignItems: "center", flexDirection: "column" }}
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          flexDirection: "column",
+        }}
       >
         {Array.isArray(data) ? (
           data
@@ -73,8 +92,8 @@ const OneCard = (card: oneCardType) => {
         ) : (
           <CardSkeleton />
         )}
-      </CardContent>
-    </Card>
+      </Box>
+    </Paper>
   );
 };
 
