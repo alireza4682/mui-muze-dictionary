@@ -63,7 +63,7 @@ const OneCard = (card: oneCardType) => {
             justifyItems: "start",
           }}
         >
-          {ModeIcon(mode)}
+          {ModeIcon(mode, "medium")}
           <Typography sx={{ ml: 2 }}>{headWord}</Typography>
         </Box>
         <IconButton onClick={() => closeCard(card)} sx={{ mr: 1 }}>

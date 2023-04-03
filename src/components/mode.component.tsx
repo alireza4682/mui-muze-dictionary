@@ -7,10 +7,10 @@ import { setMode } from "../store/slices/word.slice";
 import { useAppDispatch } from "../store/store";
 
 const actions = [
-  { icon: ModeIcon("ml"), name: "MeansLike", setMode: "ml" },
-  { icon: ModeIcon("sl"), name: "SoundsLike", setMode: "sl" },
-  { icon: ModeIcon("rel_nry"), name: "Rhymes", setMode: "rel_nry" },
-  { icon: ModeIcon("rel_trg"), name: "Trigers", setMode: "rel_trg" },
+  { icon: ModeIcon("ml", "medium"), name: "MeansLike", setMode: "ml" },
+  { icon: ModeIcon("sl", "medium"), name: "SoundsLike", setMode: "sl" },
+  { icon: ModeIcon("rel_nry", "medium"), name: "Rhymes", setMode: "rel_nry" },
+  { icon: ModeIcon("rel_trg", "medium"), name: "Trigers", setMode: "rel_trg" },
 ];
 
 const Mode = () => {

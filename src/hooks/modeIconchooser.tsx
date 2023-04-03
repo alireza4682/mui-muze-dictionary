@@ -4,16 +4,18 @@ import SpatialTrackingIcon from "@mui/icons-material/SpatialTracking";
 import LyricsIcon from "@mui/icons-material/Lyrics";
 import LightbulbCircleIcon from "@mui/icons-material/LightbulbCircle";
 
-const ModeIcon = (mode: TendPoint) => {
+type TSize = "small" | "medium" | "large";
+
+const ModeIcon = (mode: TendPoint, size: TSize) => {
   switch (mode) {
     case "ml":
-      return <SwapVertIcon sx={{ color: "greenyellow" }} />;
+      return <SwapVertIcon sx={{ color: "purple" }} fontSize={size} />;
     case "sl":
-      return <SpatialTrackingIcon sx={{ color: "greenyellow" }} />;
+      return <SpatialTrackingIcon sx={{ color: "purple" }} fontSize={size} />;
     case "rel_nry":
-      return <LyricsIcon sx={{ color: "greenyellow" }} />;
+      return <LyricsIcon sx={{ color: "purple" }} fontSize={size} />;
     case "rel_trg":
-      return <LightbulbCircleIcon sx={{ color: "greenyellow" }} />;
+      return <LightbulbCircleIcon sx={{ color: "purple" }} fontSize={size} />;
     default:
       return <div />;
   }

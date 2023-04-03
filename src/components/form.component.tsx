@@ -67,7 +67,7 @@ function Form() {
           margin="normal"
         />
 
-        {ModeIcon(mode)}
+        {ModeIcon(mode, "large")}
       </Box>
       <Button
         variant="contained"
