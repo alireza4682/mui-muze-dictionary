@@ -1,6 +1,8 @@
 import { createTheme } from "@mui/material/styles";
 import { purple, green } from "@mui/material/colors";
 import "@fontsource/charmonman/400.css";
+import "@fontsource/montserrat/700.css";
+import "@fontsource/tenor-sans/400.css";
 
 export const theme = createTheme({
   palette: {
@@ -12,7 +14,7 @@ export const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: 'Roboto, "Helvetica Neue", Arial, sans-serif,charmonman',
+    fontFamily: "Tenor Sans,Montserrat,Charmonman",
     button: {
       textTransform: "capitalize",
     },

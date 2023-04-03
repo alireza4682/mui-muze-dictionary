@@ -1,8 +1,14 @@
-import Box from "@mui/material/Box";
+import List from "@mui/material/List";
 import Modal from "@mui/material/Modal";
 import { TProps } from "./oneWord.component";
 import Typography from "@mui/material/Typography";
 import "@fontsource/charmonman";
+import { Divider } from "@mui/material";
+import ListItem from "@mui/material/ListItem";
+
+const regexHandler = (str: string) => {
+  // const regex = /^\w+/g;
+};
 
 const style = {
   position: "absolute" as "absolute",
@@ -22,11 +28,18 @@ const MeaningModal = ({ open, setOpen, defs }: TProps) => {
   const handleClose = () => setOpen(false);
   return (
     <Modal open={open} onClose={handleClose} aria-labelledby="meaning">
-      <Box sx={style}>
+      <List sx={style}>
         {Array.isArray(defs)
-          ? defs.map((d, idx) => <Typography key={idx}>{d}</Typography>)
+          ? defs.map((d, idx) => (
+              <>
+                <ListItem>
+                  <Typography key={idx}>{d}</Typography>
+                </ListItem>
+                <Divider />
+              </>
+            ))
           : null}
-      </Box>
+      </List>
     </Modal>
   );
 };

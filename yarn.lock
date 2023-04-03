@@ -273,6 +273,16 @@
   resolved "https://registry.yarnpkg.com/@fontsource/charmonman/-/charmonman-4.5.10.tgz#5105ff547708a68b63a680e38e7c017918059330"
   integrity sha512-vcx7/SxVVkXLygvDLbHtiVY3efNOlWfb+gwv80UPw2BzW99ttiM3WuGIWngAiq+dysOrjx5TLJzqSlrnlt0MXg==
 
+"@fontsource/montserrat@^4.5.14":
+  version "4.5.14"
+  resolved "https://registry.yarnpkg.com/@fontsource/montserrat/-/montserrat-4.5.14.tgz#5f4bfc5e7f234a986d94d9e7e7193f852e6971e3"
+  integrity sha512-fTvrteVzuFUePhr4QYBGoK8G/YHLJ3IhF1HhKg0AxcFvZajJT7rM7ULdmKLSd2PkX44R3aaFZq1zDbmjbGGI+w==
+
+"@fontsource/tenor-sans@^4.5.10":
+  version "4.5.10"
+  resolved "https://registry.yarnpkg.com/@fontsource/tenor-sans/-/tenor-sans-4.5.10.tgz#9632d800045882281e8f3861ee1e03422387f265"
+  integrity sha512-jkZgxIcNzqXmiELDUhqgteuTYjKnPV/FzBQHdOXecex5UhTDhnqJHb5H10i7fQZRLfMqCzHBYURl90RFdYfgtQ==
+
 "@mui/base@5.0.0-alpha.123":
   version "5.0.0-alpha.123"
   resolved "https://registry.yarnpkg.com/@mui/base/-/base-5.0.0-alpha.123.tgz#2319b3f025342ffc738f38b1070d2140421c216e"

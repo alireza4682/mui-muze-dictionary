@@ -64,7 +64,9 @@ const OneCard = (card: oneCardType) => {
           }}
         >
           {ModeIcon(mode, "medium")}
-          <Typography sx={{ ml: 2 }}>{headWord}</Typography>
+          <Typography sx={{ ml: 2 }} variant="h6">
+            <Box sx={{ fontFamily: "Montserrat" }}>{headWord}</Box>
+          </Typography>
         </Box>
         <IconButton onClick={() => closeCard(card)} sx={{ mr: 1 }}>
           <CloseIcon />

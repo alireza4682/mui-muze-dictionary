@@ -12,6 +12,8 @@
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
     "@fontsource/charmonman": "^4.5.10",
+    "@fontsource/montserrat": "^4.5.14",
+    "@fontsource/tenor-sans": "^4.5.10",
     "@mui/icons-material": "^5.11.11",
     "@mui/material": "^5.11.15",
     "@mui/system": "^5.11.13",
