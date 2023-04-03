@@ -38,11 +38,11 @@ const OneWord = ({ wordToShow, mode, callBack }: TOneWordProps) => {
           display: "flex",
           justifyContent: "space-between",
           width: "200px",
-          margin: "0px",
+          margin: "5px",
           alignItems: "center",
         }}
       >
-        <Button onClick={() => setOpen(true)} color="success">
+        <Button onClick={() => setOpen(true)} color="inherit">
           <Typography>{wordToShow.word}</Typography>
         </Button>
         <IconButton onClick={() => callBack(wordToShow.word, mode)}>

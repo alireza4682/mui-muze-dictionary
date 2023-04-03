@@ -19,10 +19,10 @@ const Mode = () => {
     dispatch(setMode(mode));
   };
   return (
-    <Box sx={{ height: 320, transform: "translateZ(0px)", flexGrow: 1 }}>
+    <Box sx={{ height: 320, transform: "-translateZ(0px)", flexGrow: 1 }}>
       <SpeedDial
         ariaLabel="Mode Selection"
-        sx={{ position: "absolute", bottom: 16, right: 16 }}
+        sx={{ position: "absolute", bottom: 16, left: 16 }}
         icon={<SpeedDialIcon />}
       >
         {actions.map((action) => (

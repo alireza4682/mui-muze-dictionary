@@ -41,7 +41,7 @@ const OneCard = (card: oneCardType) => {
         width: "250px",
         height: "370px",
         borderRadius: "15px",
-        backgroundColor: "#e1bee7",
+        backgroundColor: "",
         margin: "15px",
       }}
       variant="elevation"
