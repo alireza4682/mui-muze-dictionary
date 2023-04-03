@@ -43,7 +43,7 @@ const CardContainer = () => {
       <Grid
         container
         spacing={{ xs: 2, md: 3 }}
-        columns={{ xs: 4, sm: 8, md: 12 }}
+        columns={{ xs: 4, sm: 6, md: 8 }}
       >
         {onListMemo}
       </Grid>
