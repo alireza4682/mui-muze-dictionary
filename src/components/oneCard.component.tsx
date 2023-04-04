@@ -41,10 +41,8 @@ const OneCard = (card: oneCardType) => {
         width: "250px",
         height: "340px",
         borderRadius: "15px",
-        backgroundColor: "gray",
+        backgroundColor: "",
         margin: "15px",
-        transition: "ease-in-out",
-        transitionDuration: "500ms",
       }}
     >
       <Box
@@ -67,14 +65,16 @@ const OneCard = (card: oneCardType) => {
         >
           {ModeIcon(mode, "medium")}
           <Typography sx={{ ml: 2 }} variant="h6">
-            <Box sx={{ fontFamily: "Montserrat" }}>{headWord}</Box>
+            <Box sx={{ fontFamily: "Charmonman", fontSize: 25 }}>
+              {headWord}
+            </Box>
           </Typography>
         </Box>
         <IconButton onClick={() => closeCard(card)} sx={{ mr: 1 }}>
           <CloseIcon />
         </IconButton>
       </Box>
-      <Divider variant="middle" />
+      <Divider variant="fullWidth" sx={{ borderStyle: "dashed" }} />
       <Box
         sx={{
           display: "flex",

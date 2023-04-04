@@ -43,7 +43,9 @@ const OneWord = ({ wordToShow, mode, callBack }: TOneWordProps) => {
         }}
       >
         <Button onClick={() => setOpen(true)} color="inherit">
-          <Typography>{wordToShow.word}</Typography>
+          <Typography fontFamily="Unna" fontSize={18}>
+            {wordToShow.word}
+          </Typography>
         </Button>
         <IconButton onClick={() => callBack(wordToShow.word, mode)}>
           <ArrowRightIcon sx={{ color: !seen ? "blue" : "red" }} />

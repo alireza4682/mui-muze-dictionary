@@ -3,6 +3,7 @@ import { purple, green } from "@mui/material/colors";
 import "@fontsource/charmonman/400.css";
 import "@fontsource/montserrat/700.css";
 import "@fontsource/tenor-sans/400.css";
+import "@fontsource/unna/700.css";
 
 export const theme = createTheme({
   palette: {
@@ -14,7 +15,7 @@ export const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: "Tenor Sans,Montserrat,Charmonman",
+    fontFamily: "Tenor Sans,Montserrat,Charmonman, Unna",
     button: {
       textTransform: "capitalize",
     },

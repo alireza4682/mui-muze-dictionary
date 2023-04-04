@@ -295,6 +295,11 @@
   resolved "https://registry.yarnpkg.com/@fontsource/tenor-sans/-/tenor-sans-4.5.10.tgz#9632d800045882281e8f3861ee1e03422387f265"
   integrity sha512-jkZgxIcNzqXmiELDUhqgteuTYjKnPV/FzBQHdOXecex5UhTDhnqJHb5H10i7fQZRLfMqCzHBYURl90RFdYfgtQ==
 
+"@fontsource/unna@^4.5.9":
+  version "4.5.9"
+  resolved "https://registry.yarnpkg.com/@fontsource/unna/-/unna-4.5.9.tgz#c94520a0be51f1b765e1fe1b387aad8552dcdf08"
+  integrity sha512-HAUZf/0FRazVKyn38xIN+/yu2AAULSSmbk+NBTixNykYHZx34/h7qmfYjN9BPrIajWp5nEdBWdX85AsbjcV58w==
+
 "@mui/base@5.0.0-alpha.123":
   version "5.0.0-alpha.123"
   resolved "https://registry.yarnpkg.com/@mui/base/-/base-5.0.0-alpha.123.tgz#2319b3f025342ffc738f38b1070d2140421c216e"
