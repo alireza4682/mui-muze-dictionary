@@ -8,6 +8,7 @@ import Grid from "@mui/material/Unstable_Grid2";
 import { Box } from "@mui/system";
 import SpeedDial from "@mui/material/SpeedDial";
 import Close from "@mui/icons-material/Close";
+import { motion, AnimatePresence } from "framer-motion";
 
 const CardContainer = () => {
   const cards = useSelector((store: RootState) => store.word.cards);
@@ -19,18 +20,31 @@ const CardContainer = () => {
 
   const onListChange = useCallback(
     (cards: oneCardType[]) => {
-      return cards.map((card, idx) => {
-        return (
-          <Grid xs={2} sm={2} md={2} key={idx}>
-            <OneCard {...card} />
-          </Grid>
-        );
-      });
+      return (
+        <AnimatePresence mode="popLayout">
+          {cards.map((card, _) => {
+            return (
+              <Grid xs={2} sm={2} md={2} key={card.headWord}>
+                <motion.div
+                  key={card.headWord}
+                  layout
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <OneCard {...card} />
+                </motion.div>
+              </Grid>
+            );
+          })}
+        </AnimatePresence>
+      );
     },
     [cards]
   );
 
-  const onListMemo = useMemo(() => onListChange(cards), [cards.length]);
+  // const onListMemo = useMemo(() => onListChange(cards), [cards.length]);
 
   return (
     <Box sx={{ position: "relative" }}>
@@ -45,7 +59,7 @@ const CardContainer = () => {
         spacing={{ xs: 2, md: 3 }}
         columns={{ xs: 4, sm: 6, md: 8 }}
       >
-        {onListMemo}
+        {onListChange(cards)}
       </Grid>
     </Box>
   );

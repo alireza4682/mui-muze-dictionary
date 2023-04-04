@@ -43,6 +43,8 @@ const OneCard = (card: oneCardType) => {
         borderRadius: "15px",
         backgroundColor: "gray",
         margin: "15px",
+        transition: "ease-in-out",
+        transitionDuration: "500ms",
       }}
     >
       <Box
