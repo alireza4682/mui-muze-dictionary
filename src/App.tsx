@@ -4,10 +4,18 @@ import Mode from "./components/mode.component";
 
 function App() {
   return (
-    <div style={{ display: "flex", flexDirection: "column" }}>
-      <Form />
-      <CardContainer />
-      <Mode />
+    <div className="background">
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          backgroundColor: "",
+        }}
+      >
+        <Form />
+        <CardContainer />
+        <Mode />
+      </div>
     </div>
   );
 }
