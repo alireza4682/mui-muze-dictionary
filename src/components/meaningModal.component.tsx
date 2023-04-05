@@ -24,7 +24,7 @@ const style = {
   overflow: "auto",
 };
 
-const MeaningModal = ({ open, setOpen, defs }: TProps) => {
+const MeaningModal = ({ open, setOpen, defs, wordToPass }: TProps) => {
   const handleClose = () => setOpen(false);
   return (
     <Modal open={open} onClose={handleClose} aria-labelledby="meaning">

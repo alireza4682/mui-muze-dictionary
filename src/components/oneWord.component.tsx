@@ -4,7 +4,7 @@ import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 import IconButton from "@mui/material/IconButton";
 import { TendPoint } from "../store/slices/word.slice";
 import Divider from "@mui/material/Divider";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import MeaningModal from "./meaningModal.component";
 import Button from "@mui/material/Button";
 import { TData } from "../hooks/queryWord";
@@ -15,6 +15,7 @@ export type TProps = {
   open: boolean;
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
   defs: string[];
+  wordToPass: string;
 };
 
 type TOneWordProps = {
@@ -26,7 +27,8 @@ type TOneWordProps = {
 const OneWord = ({ wordToShow, mode, callBack }: TOneWordProps) => {
   const [open, setOpen] = useState(false);
   const defs = wordToShow.defs;
-  const props = { open, setOpen, defs };
+  const wordToPass = wordToShow.word;
+  const props = { open, setOpen, defs, wordToPass };
   const cards = useSelector((store: RootState) => store.word.cards);
   const seen = cards.find((card) => card.headWord === wordToShow.word);
 
