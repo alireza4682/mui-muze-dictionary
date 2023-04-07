@@ -4,12 +4,12 @@ import Mode from "./components/mode.component";
 
 function App() {
   return (
-    <div>
+    <div style={{}}>
       <div
         style={{
           display: "flex",
           flexDirection: "column",
-          backgroundColor: "",
+          maxWidth: 1700,
         }}
       >
         <Mode />

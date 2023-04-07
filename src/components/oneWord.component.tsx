@@ -1,6 +1,6 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import ArrowRightIcon from "@mui/icons-material/ArrowRight";
+import PlayCircleRoundedIcon from "@mui/icons-material/PlayCircleRounded";
 import IconButton from "@mui/material/IconButton";
 import { TendPoint } from "../store/slices/word.slice";
 import Divider from "@mui/material/Divider";
@@ -49,8 +49,13 @@ const OneWord = ({ wordToShow, mode, callBack }: TOneWordProps) => {
             {wordToShow.word}
           </Typography>
         </Button>
-        <IconButton onClick={() => callBack(wordToShow.word, mode)}>
-          <ArrowRightIcon sx={{ color: !seen ? "blue" : "red" }} />
+        <IconButton
+          onClick={() => callBack(wordToShow.word, mode)}
+          sx={{ bgcolor: "" }}
+        >
+          <PlayCircleRoundedIcon
+            sx={{ color: !seen ? "#0288d1" : "#c51162" }}
+          />
         </IconButton>
       </Box>
       <Divider variant="middle" />

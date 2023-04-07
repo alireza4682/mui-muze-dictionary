@@ -5,7 +5,7 @@ import { onFetchSuccess, setHeadWord } from "../store/slices/word.slice";
 import { RootState, useAppDispatch } from "../store/store";
 import { Box } from "@mui/system";
 import TextField from "@mui/material/TextField";
-import { Button } from "@mui/material";
+import { Button, IconButton } from "@mui/material";
 import styled from "@emotion/styled";
 import SearchIcon from "@mui/icons-material/Search";
 import ModeIcon from "../hooks/modeIconchooser";
@@ -78,7 +78,7 @@ function Form() {
       </Box>
       <Button
         variant="contained"
-        sx={{ backgroundColor: "gray", mr: 5 }}
+        sx={{ backgroundColor: "#3d5afe", mr: 10 }}
         startIcon={<SearchIcon />}
         onClick={searchWord}
       >

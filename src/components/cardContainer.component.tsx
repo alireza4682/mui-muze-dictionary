@@ -50,7 +50,7 @@ const CardContainer = () => {
     <Box sx={{ position: "relative" }}>
       <SpeedDial
         ariaLabel="close all cards"
-        sx={{ position: "absolute", top: 16, right: 16 }}
+        sx={{ position: "absolute", top: -60, right: 16 }}
         icon={<Close />}
         onClick={() => onCloseAllCards()}
       />
