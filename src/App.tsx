@@ -12,9 +12,9 @@ function App() {
           backgroundColor: "",
         }}
       >
+        <Mode />
         <Form />
         <CardContainer />
-        <Mode />
       </div>
     </div>
   );

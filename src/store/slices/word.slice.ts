@@ -39,7 +39,6 @@ const wordSlice = createSlice({
   initialState: { currentWord: "", cards: [], mode: "ml" } as wordStateType,
   reducers: {
     setHeadWord: (state, action) => {
-      state.currentWord = "";
       state.currentWord = action.payload;
     },
     removeCard: (state, action) => {

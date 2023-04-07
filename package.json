@@ -11,7 +11,7 @@
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
-    "@fontsource/charmonman": "^4.5.10",
+    "@fontsource/asap": "^4.5.11",
     "@fontsource/montserrat": "^4.5.14",
     "@fontsource/tenor-sans": "^4.5.10",
     "@fontsource/unna": "^4.5.9",

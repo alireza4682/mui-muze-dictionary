@@ -3,7 +3,6 @@ import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 import { TProps } from "./oneWord.component";
 import Typography from "@mui/material/Typography";
-import "@fontsource/charmonman";
 import { Divider } from "@mui/material";
 import ListItem from "@mui/material/ListItem";
 

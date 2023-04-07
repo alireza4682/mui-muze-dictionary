@@ -280,10 +280,10 @@
   resolved "https://registry.yarnpkg.com/@esbuild/win32-x64/-/win32-x64-0.16.17.tgz#c5a1a4bfe1b57f0c3e61b29883525c6da3e5c091"
   integrity sha512-y+EHuSchhL7FjHgvQL/0fnnFmO4T1bhvWANX6gcnqTjtnKWbTvUMCpGnv2+t+31d7RzyEAYAd4u2fnIhHL6N/Q==
 
-"@fontsource/charmonman@^4.5.10":
-  version "4.5.10"
-  resolved "https://registry.yarnpkg.com/@fontsource/charmonman/-/charmonman-4.5.10.tgz#5105ff547708a68b63a680e38e7c017918059330"
-  integrity sha512-vcx7/SxVVkXLygvDLbHtiVY3efNOlWfb+gwv80UPw2BzW99ttiM3WuGIWngAiq+dysOrjx5TLJzqSlrnlt0MXg==
+"@fontsource/asap@^4.5.11":
+  version "4.5.11"
+  resolved "https://registry.yarnpkg.com/@fontsource/asap/-/asap-4.5.11.tgz#a791bc14fdc7514bf919668fc093b68224b1ed95"
+  integrity sha512-4TvColdmnvp6UWo4KuOLMST7lqfZTB9YKC+e/UPtEfABZKTLkJCv4B/b0tal9VytUQqIYlN+Y+EIxsmHLsCfUQ==
 
 "@fontsource/montserrat@^4.5.14":
   version "4.5.14"

@@ -9,6 +9,7 @@ import { Button } from "@mui/material";
 import styled from "@emotion/styled";
 import SearchIcon from "@mui/icons-material/Search";
 import ModeIcon from "../hooks/modeIconchooser";
+import { motion } from "framer-motion";
 
 const CssTextField = styled(TextField)({
   "& label.Mui-focused": {
@@ -66,8 +67,14 @@ function Form() {
           onChange={onChangeBox}
           margin="normal"
         />
-
-        {ModeIcon(mode, "large")}
+        <Box sx={{ ml: 3, mt: 1 }}>
+          <motion.div
+            animate={{ scale: [1, 1.2, 1.2, 1, 1] }}
+            transition={{ repeat: Infinity, repeatDelay: 0.5 }}
+          >
+            {ModeIcon(mode, "large")}
+          </motion.div>
+        </Box>
       </Box>
       <Button
         variant="contained"

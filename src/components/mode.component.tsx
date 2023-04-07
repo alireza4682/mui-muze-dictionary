@@ -38,7 +38,7 @@ const Mode = () => {
     >
       <StyledSpeedDial
         ariaLabel="Mode Selection"
-        sx={{ position: "absolute", bottom: 16, left: 16 }}
+        sx={{ position: "absolute", top: 16, left: 16 }}
         direction={"right"}
         icon={<SpeedDialIcon />}
       >
