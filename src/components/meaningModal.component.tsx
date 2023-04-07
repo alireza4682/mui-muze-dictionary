@@ -1,5 +1,6 @@
 import List from "@mui/material/List";
 import Modal from "@mui/material/Modal";
+import Box from "@mui/material/Box";
 import { TProps } from "./oneWord.component";
 import Typography from "@mui/material/Typography";
 import "@fontsource/charmonman";
@@ -28,18 +29,23 @@ const MeaningModal = ({ open, setOpen, defs, wordToPass }: TProps) => {
   const handleClose = () => setOpen(false);
   return (
     <Modal open={open} onClose={handleClose} aria-labelledby="meaning">
-      <List sx={style}>
-        {Array.isArray(defs)
-          ? defs.map((d, idx) => (
-              <>
-                <ListItem>
-                  <Typography key={idx}>{d}</Typography>
-                </ListItem>
-                <Divider />
-              </>
-            ))
-          : null}
-      </List>
+      <Box sx={style}>
+        <Typography sx={{ fontSize: 25, fontFamily: "Unna" }}>
+          {wordToPass}
+        </Typography>
+        <List>
+          {Array.isArray(defs)
+            ? defs.map((d, idx) => (
+                <>
+                  <ListItem>
+                    <Typography key={idx}>{d}</Typography>
+                  </ListItem>
+                  <Divider />
+                </>
+              ))
+            : null}
+        </List>
+      </Box>
     </Modal>
   );
 };

@@ -4,7 +4,7 @@ import Mode from "./components/mode.component";
 
 function App() {
   return (
-    <div className="background">
+    <div>
       <div
         style={{
           display: "flex",

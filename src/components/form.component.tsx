@@ -71,7 +71,7 @@ function Form() {
       </Box>
       <Button
         variant="contained"
-        sx={{ backgroundColor: "gray" }}
+        sx={{ backgroundColor: "gray", mr: 5 }}
         startIcon={<SearchIcon />}
         onClick={searchWord}
       >
