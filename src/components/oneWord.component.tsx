@@ -30,7 +30,10 @@ const OneWord = ({ wordToShow, mode, callBack }: TOneWordProps) => {
   const wordToPass = wordToShow.word;
   const props = { open, setOpen, defs, wordToPass };
   const cards = useSelector((store: RootState) => store.word.cards);
-  const seen = cards.find((card) => card.headWord === wordToShow.word);
+  const mainMode = useSelector((store: RootState) => store.word.mode);
+  const seen = cards.find(
+    (card) => card.headWord === wordToShow.word && card.mode === mainMode
+  );
 
   return (
     <Box component="div">

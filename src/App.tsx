@@ -9,7 +9,6 @@ function App() {
         style={{
           display: "flex",
           flexDirection: "column",
-          maxWidth: 1700,
         }}
       >
         <Mode />

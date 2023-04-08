@@ -22,11 +22,11 @@ const CardContainer = () => {
     (cards: oneCardType[]) => {
       return (
         <AnimatePresence mode="popLayout">
-          {cards.map((card, _) => {
+          {cards.map((card, idx) => {
             return (
-              <Grid xs={2} sm={2} md={2} key={card.headWord}>
+              <Grid xs={2} sm={2} md={2} key={idx}>
                 <motion.div
-                  key={card.headWord}
+                  key={idx}
                   layout
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
